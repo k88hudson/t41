@@ -7,6 +7,6 @@
     "lesshat": "~1.1.2",
     "jquery": "~2.0.3",
     "requirejs": "~2.1.8",
-    "Animated_GIF": "git@github.com:k88hudson/Animated_GIF.git"
+    "Animated_GIF": "https://github.com/k88hudson/Animated_GIF.git"
   }
 }
