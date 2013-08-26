@@ -1,0 +1,13 @@
+!!! 5
+html(lang="en")
+  head
+    title Test for t41
+    link(rel="stylesheet" href="main.css")
+  body
+    .tile
+      canvas.canvas
+      img.photo
+      video.recorder
+      input.video-input(type="file" accept="image/*;capture=camera")
+
+    script(src="/bower_components/requirejs/require.js" data-main="main")

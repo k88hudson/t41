@@ -1,0 +1,14 @@
+{
+  "name": "t41",
+  "version": "0.0.0",
+  "dependencies": {
+    "bower": "~1.1.0",
+    "express": "~3.3.3",
+    "habitat": "~0.4.2",
+    "less-middleware": "~0.1.12",
+    "jade": "~0.35.0"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/.bin/bower install"
+  }
+}
