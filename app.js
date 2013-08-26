@@ -31,7 +31,7 @@ app.use(lessMiddleware({
   optimization: optimize ? 0 : 2
 }));
 
-var cacheSettings = optmize ? { maxAge: '31556952000' } : undefined; // one year;
+var cacheSettings = optimize ? { maxAge: '31556952000' } : undefined; // one year;
 
 app.use(express.static(tmpDir, cacheSettings));
 app.use(express.static(__dirname + '/public', cacheSettings));
