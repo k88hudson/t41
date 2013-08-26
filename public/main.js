@@ -55,7 +55,7 @@ require(['jquery', 'animatedGif'], function ($, AnimatedGif) {
   }
 
   function snapPicture() {
-    console.log("SNAP");
+    $video.off('click', onClick);
     var data;
     $canvas[0].getContext('2d').drawImage($video[0], 0, 0, width, height);
     var img = document.createElement('img');
@@ -66,6 +66,7 @@ require(['jquery', 'animatedGif'], function ($, AnimatedGif) {
       clearInterval(interval);
       makeGif();
       count = 0;
+      $video.on('click', onClick);
     }
   }
 
