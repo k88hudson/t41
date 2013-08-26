@@ -65,6 +65,7 @@ require(['jquery', 'animatedGif'], function ($, AnimatedGif) {
     if ( count === COUNT ) {
       clearInterval(interval);
       makeGif();
+      count = 0;
     }
   }
 
