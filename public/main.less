@@ -12,12 +12,15 @@
 
 .tile {
   width: 100%;
+  background: #3FB58E;
 }
 
 .recorder {
   display: block;
   width: 100%;
-  background: blue;
+  &.recording {
+    opacity: 0.8;
+  }
 }
 
 .video-input {
@@ -34,4 +37,7 @@
 
 .photo {
   width: 100%;
+  img {
+    width: 33%;
+  }
 }
