@@ -31,21 +31,12 @@ app.use(lessMiddleware({
   optimization: optimize ? 0 : 2
 }));
 
-app.use(express.static(tmpDir, {
-  maxAge: '31556952000' // one year
-}));
+var cacheSettings = optmize ? { maxAge: '31556952000' } : undefined; // one year;
 
-app.use(express.static(__dirname + '/public', {
-  maxAge: '31556952000' // one year
-}));
-
-app.use('/bower_components', express.static(__dirname + '/bower_components', {
-  maxAge: '31556952000' // one year
-}));
-
-app.use('/views', express.static(__dirname + '/views', {
-  maxAge: '31556952000' // one year
-}));
+app.use(express.static(tmpDir, cacheSettings));
+app.use(express.static(__dirname + '/public', cacheSettings));
+app.use('/bower_components', express.static(__dirname + '/bower_components', cacheSettings));
+app.use('/views', express.static(__dirname + '/views', cacheSettings));
 
 app.use(app.router);
 
